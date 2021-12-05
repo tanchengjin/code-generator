@@ -7,5 +7,5 @@
   | generator-code\src\main\java\com\tanchengjin\generatorcode\core\model\ConfigurationModel.java 配置类 \
   +-------------------------------------------------------------------------------------------------- 
   
-  GeneratorApplication 运行类 \
+  GeneratorApplication 生成类 \
   GeneratorCodeApplication spring boot启动器（不需要运行！）
