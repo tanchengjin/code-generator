@@ -61,7 +61,7 @@ public class GeneratorApplication {
     //模拟输入表
     private static String[] getSelectTables() {
         return new String[]{
-                "article"
+                "article_comment"
         };
     }
 }

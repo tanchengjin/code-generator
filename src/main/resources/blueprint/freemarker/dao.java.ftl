@@ -29,7 +29,7 @@ public interface ${pojoName}Mapper {
 
     List<${pojoName}> getAllByCondition(${pojoName} condition);
 
-    long count();
+    ${pk.fieldType.rawJavaType} count();
 
     int batchDeleteByPrimaryKey(${pk.fieldType.rawJavaType}[] ${pk.name}s);
 

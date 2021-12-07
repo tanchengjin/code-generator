@@ -122,7 +122,9 @@
                     let id = e.data.id;
                     $.ajax({
                         beforeSend:function (xhr, settings) {
+                            ${r"<#if (_csrf.headerName)??>"}
                             xhr.setRequestHeader('${r"${(_csrf.headerName)!''}"}',"${r"${(_csrf.token)!''}"}");
+                            ${r"</#if>"}
                         },
                         method: "DELETE",
                         url: id,
@@ -185,7 +187,9 @@
                                 </#list>
                                 $.ajax({
                                     beforeSend:function (xhr, settings) {
-                                        xhr.setRequestHeader('${r"${(_csrf.headerName)!''}"}',"${r"${(_csrf.token)!''}"}");
+                                        ${r"<#if (_csrf.headerName)??>"}
+                                            xhr.setRequestHeader('${r"${(_csrf.headerName)!''}"}',"${r"${(_csrf.token)!''}"}");
+                                        ${r"</#if>"}
                                     },
                                     method: "PUT",
                                     url: field.id,
@@ -257,7 +261,9 @@
                     //执行 Ajax 后重载
                     $.ajax({
                         beforeSend:function (xhr, settings) {
+                            ${r"<#if (_csrf.headerName)??>"}
                             xhr.setRequestHeader('${r"${(_csrf.headerName)!''}"}',"${r"${(_csrf.token)!''}"}");
+                            ${r"</#if>"}
                         },
                         contentType:'${ajaxContentType}',
                         method: "DELETE",
@@ -323,7 +329,9 @@
                             //提交 Ajax 成功后，静态更新表格中的数据
                             $.ajax({
                                 beforeSend:function (xhr, settings) {
+                                    ${r"<#if (_csrf.headerName)??>"}
                                     xhr.setRequestHeader('${r"${(_csrf.headerName)!''}"}',"${r"${(_csrf.token)!''}"}");
+                                    ${r"</#if>"}
                                 },
                                 method: "POST",
                                 url: "./",
@@ -375,7 +383,9 @@
                 let id = $(res.elem).data('id');
                 $.ajax({
                     beforeSend:function (xhr, settings) {
+                        ${r"<#if (_csrf.headerName)??>"}
                         xhr.setRequestHeader('${r"${(_csrf.headerName)!''}"}',"${r"${(_csrf.token)!''}"}");
+                        ${r"</#if>"}
                     },
                     contentType:'${ajaxContentType}',
                     method: "PUT",
